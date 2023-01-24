@@ -20,11 +20,11 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * Sample Activity demonstrating how to connect to the network and fetch raw
@@ -50,7 +50,7 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_main);
-        mDataText = (TextView) findViewById(R.id.data_text);
+        //mDataText = (TextView) findViewById(R.id.data_text);
         mNetworkFragment = NetworkFragment.getInstance(getSupportFragmentManager(), "https://www.google.com");
     }
 

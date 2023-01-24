@@ -17,7 +17,6 @@
 package com.example.android.networkconnect;
 
 import android.net.NetworkInfo;
-import android.support.annotation.IntDef;
 
 /**
  * Sample interface containing bare minimum methods needed for an asynchronous task

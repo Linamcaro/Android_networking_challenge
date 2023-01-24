@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.appcompat:appcompat:1.6.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/d3bc83a6a2f2b86b31e767d6f0a1ce60/transformed/appcompat-1.6.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/d3bc83a6a2f2b86b31e767d6f0a1ce60/transformed/appcompat-1.6.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/d3bc83a6a2f2b86b31e767d6f0a1ce60/transformed/appcompat-1.6.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/d3bc83a6a2f2b86b31e767d6f0a1ce60/transformed/appcompat-1.6.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.6.0/2c9782a4e520547e9c09103d11207a6253c7b74c/appcompat-1.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

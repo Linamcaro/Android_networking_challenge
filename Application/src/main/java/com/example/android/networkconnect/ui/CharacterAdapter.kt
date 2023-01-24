@@ -1,4 +1,4 @@
-package com.example.android.networkconnect.UI
+package com.example.android.networkconnect.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,15 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.android.networkconnect.MainActivity
 import com.example.android.networkconnect.databinding.CharacterItemListBinding
 import com.example.android.networkconnect.model.CharacterProfile
+import com.example.android.networkconnect.model.CharacterResponse
 
-class CharacterAdapter(): RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+class CharacterAdapter(
+    mainActivity: MainActivity,
+    characterProfiles: CharacterResponse
+) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
     override fun getItemCount() = data.size
 

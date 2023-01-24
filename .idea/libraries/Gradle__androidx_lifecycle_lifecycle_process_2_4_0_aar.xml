@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.lifecycle:lifecycle-process:2.4.0@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/ffd365ac3f05cc7a17237d46316a81ef/transformed/lifecycle-process-2.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/ffd365ac3f05cc7a17237d46316a81ef/transformed/lifecycle-process-2.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/ffd365ac3f05cc7a17237d46316a81ef/transformed/lifecycle-process-2.4.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-process/2.4.0/30f942ae82287047dd2dc7410060672ca44c1942/lifecycle-process-2.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

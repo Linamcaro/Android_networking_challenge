@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.14.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/86921cd1bfe59bc7baa727ab81b1020d/transformed/gifdecoder-4.14.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/86921cd1bfe59bc7baa727ab81b1020d/transformed/gifdecoder-4.14.2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/86921cd1bfe59bc7baa727ab81b1020d/transformed/gifdecoder-4.14.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.14.2/37330309afd3b5a49b73ee1f8763cb9c076ea547/gifdecoder-4.14.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.14.2/490ff4b4f09fa816b89f601c7aae220647b991bc/gifdecoder-4.14.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

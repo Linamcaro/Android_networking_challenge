@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
@@ -44,6 +45,9 @@ import com.google.gson.Gson;
 public class MainActivity extends FragmentActivity implements DownloadCallback {
 
     private static final String API = "https://rickandmortyapi.com/api/character";
+
+    //Reference to the welcoming message TextView
+    private TextView introText;
 
     // Reference to the recycler view showing fetched data, so we can clear it with a button
     // as necessary.
@@ -70,8 +74,10 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
         setContentView(R.layout.sample_main);
 
         characterList = findViewById(R.id.characterList);
+        introText = findViewById(R.id.intro_text);
 
         mProgressBar = findViewById(R.id.progressBar);
+        mProgressBar.setVisibility(View.GONE);
 
         mNetworkFragment = NetworkFragment.getInstance(getSupportFragmentManager(), API);
     }
@@ -88,12 +94,15 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
             // When the user clicks FETCH, fetch the first 500 characters of
             // raw HTML from www.google.com.
             case R.id.fetch_action:
+                introText.setVisibility(View.GONE);
+                characterList.setAdapter(null);
                 startDownload();
                 return true;
             // Clear the text and cancel download.
             case R.id.clear_action:
                 finishDownloading();
-                characterList.removeAllViewsInLayout();
+                characterList.setAdapter(null);
+                introText.setVisibility(View.VISIBLE);
                 return true;
         }
         return false;
@@ -114,6 +123,8 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     @Override
     public void updateFromDownload(String result) {
         if (result != null) {
+
+            //Convert the fetch result into an object of type CharacterResponse
             Gson gson = new Gson();
             CharacterResponse apiResponse = gson.fromJson(result,CharacterResponse.class);
             mCharacterAdapter = new CharacterAdapter(apiResponse);
@@ -121,8 +132,11 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
 
         } else {
 
+            //Shows a short Toast with a connection error
             Toast.makeText(this,getString(R.string.connection_error),Toast.LENGTH_SHORT)
                     .show();
+
+            mProgressBar.setVisibility(View.GONE);
 
         }
     }

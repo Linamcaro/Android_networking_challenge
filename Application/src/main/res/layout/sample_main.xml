@@ -22,14 +22,16 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
     <TextView
         android:id="@+id/intro_text"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="16sp"
         android:text="@string/welcome_message"
-        android:freezesText="true"/>
+        android:freezesText="true"
+        android:layout_marginTop="15dp"/>
+
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
@@ -40,7 +42,7 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_margin="18dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/characterList"

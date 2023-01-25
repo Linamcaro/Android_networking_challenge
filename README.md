@@ -60,3 +60,8 @@ Support
 
 - Stack Overflow: http://stackoverflow.com/questions/tagged/android
 - Talk to your DevSavant contact.
+
+
+Solution Preview
+----------------
+img src="/Gif/app_preview.gif" width="250" height="450"/>

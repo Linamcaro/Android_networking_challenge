@@ -22,9 +22,18 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.networkconnect.model.CharacterProfile;
+import com.example.android.networkconnect.model.CharacterResponse;
+import com.example.android.networkconnect.ui.CharacterAdapter;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 
 /**
  * Sample Activity demonstrating how to connect to the network and fetch raw
@@ -34,9 +43,11 @@ import androidx.fragment.app.FragmentActivity;
  */
 public class MainActivity extends FragmentActivity implements DownloadCallback {
 
-    // Reference to the TextView showing fetched data, so we can clear it with a button
+    private static final String API = "https://rickandmortyapi.com/api/character";
+
+    // Reference to the recycler view showing fetched data, so we can clear it with a button
     // as necessary.
-    private TextView mDataText;
+    private RecyclerView characterList;
 
     // Keep a reference to the NetworkFragment which owns the AsyncTask object
     // that is used to execute network ops.
@@ -46,12 +57,23 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     // downloads with consecutive button clicks.
     private boolean mDownloading = false;
 
+    //Reference to the ProgressBar, to know when if it is fetching the data
+    private ProgressBar mProgressBar;
+
+    //Reference to the adapter
+    private  CharacterAdapter mCharacterAdapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_main);
-        //mDataText = (TextView) findViewById(R.id.data_text);
-        mNetworkFragment = NetworkFragment.getInstance(getSupportFragmentManager(), "https://www.google.com");
+
+        characterList = findViewById(R.id.characterList);
+
+        mProgressBar = findViewById(R.id.progressBar);
+
+        mNetworkFragment = NetworkFragment.getInstance(getSupportFragmentManager(), API);
     }
 
     @Override
@@ -71,7 +93,7 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
             // Clear the text and cancel download.
             case R.id.clear_action:
                 finishDownloading();
-                mDataText.setText("");
+                characterList.removeAllViewsInLayout();
                 return true;
         }
         return false;
@@ -79,6 +101,10 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
 
     private void startDownload() {
         if (!mDownloading && mNetworkFragment != null) {
+
+            //Show the progressBar
+            mProgressBar.setVisibility(View.VISIBLE);
+
             // Execute the async download.
             mNetworkFragment.startDownload();
             mDownloading = true;
@@ -88,9 +114,16 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     @Override
     public void updateFromDownload(String result) {
         if (result != null) {
-            mDataText.setText(result);
+            Gson gson = new Gson();
+            CharacterResponse apiResponse = gson.fromJson(result,CharacterResponse.class);
+            mCharacterAdapter = new CharacterAdapter(apiResponse);
+            characterList.setAdapter(mCharacterAdapter);
+
         } else {
-            mDataText.setText(getString(R.string.connection_error));
+
+            Toast.makeText(this,getString(R.string.connection_error),Toast.LENGTH_SHORT)
+                    .show();
+
         }
     }
 
@@ -98,12 +131,12 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     public NetworkInfo getActiveNetworkInfo() {
         ConnectivityManager connectivityManager =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        return networkInfo;
+        return connectivityManager.getActiveNetworkInfo();
     }
 
     @Override
     public void finishDownloading() {
+        mProgressBar.setVisibility(View.GONE);
         mDownloading = false;
         if (mNetworkFragment != null) {
             mNetworkFragment.cancelDownload();
@@ -121,7 +154,6 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
             case Progress.GET_INPUT_STREAM_SUCCESS:
                 break;
             case Progress.PROCESS_INPUT_STREAM_IN_PROGRESS:
-                mDataText.setText("" + percentComplete + "%");
                 break;
             case Progress.PROCESS_INPUT_STREAM_SUCCESS:
                 break;

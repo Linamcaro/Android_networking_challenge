@@ -10,7 +10,7 @@ import com.example.android.networkconnect.databinding.CharacterItemListBinding
 import com.example.android.networkconnect.model.CharacterProfile
 import com.example.android.networkconnect.model.CharacterResponse
 
-class CharacterAdapter(var characterResponse: CharacterResponse) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+class CharacterAdapter(private var characterResponse: CharacterResponse) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
 
     override fun getItemCount() = characterResponse.results.size
@@ -49,17 +49,6 @@ class CharacterAdapter(var characterResponse: CharacterResponse) : RecyclerView.
             }
         }
 
-    }
-
-    //check if an item are the same or if the content are the same
-    private val characterDiffCallback = object : DiffUtil.ItemCallback<CharacterProfile>() {
-        override fun areItemsTheSame(oldItem: CharacterProfile, newItem: CharacterProfile): Boolean {
-            return oldItem.id == newItem.id
-        }
-
-        override fun areContentsTheSame(oldItem: CharacterProfile, newItem: CharacterProfile): Boolean {
-            return newItem == oldItem
-        }
     }
 
 }

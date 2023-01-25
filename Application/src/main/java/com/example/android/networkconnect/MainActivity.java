@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -92,7 +93,7 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
             // Clear the text and cancel download.
             case R.id.clear_action:
                 finishDownloading();
-                mCharacterAdapter = null ;
+                characterList.removeAllViewsInLayout();
                 return true;
         }
         return false;
@@ -118,13 +119,11 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
             mCharacterAdapter = new CharacterAdapter(apiResponse);
             characterList.setAdapter(mCharacterAdapter);
 
-
         } else {
 
-            Snackbar.make(this.findViewById(android.R.id.content),
-                    getString(R.string.connection_error),
-                    Snackbar.LENGTH_SHORT)
+            Toast.makeText(this,getString(R.string.connection_error),Toast.LENGTH_SHORT)
                     .show();
+
         }
     }
 

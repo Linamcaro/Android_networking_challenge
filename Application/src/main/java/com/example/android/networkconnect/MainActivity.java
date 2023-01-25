@@ -28,6 +28,7 @@ import android.widget.ProgressBar;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.networkconnect.model.CharacterProfile;
 import com.example.android.networkconnect.model.CharacterResponse;
 import com.example.android.networkconnect.ui.CharacterAdapter;
 import com.google.android.material.snackbar.Snackbar;
@@ -59,7 +60,7 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     private ProgressBar mProgressBar;
 
     //Reference to the adapter
-    private CharacterAdapter mCharacterAdapter;
+    private  CharacterAdapter mCharacterAdapter;
 
 
     @Override
@@ -91,7 +92,7 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
             // Clear the text and cancel download.
             case R.id.clear_action:
                 finishDownloading();
-                mCharacterAdapter.setData(null);
+                mCharacterAdapter = null ;
                 return true;
         }
         return false;
@@ -114,8 +115,9 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
         if (result != null) {
             Gson gson = new Gson();
             CharacterResponse apiResponse = gson.fromJson(result,CharacterResponse.class);
-            mCharacterAdapter = new CharacterAdapter(this, apiResponse);
+            mCharacterAdapter = new CharacterAdapter(apiResponse);
             characterList.setAdapter(mCharacterAdapter);
+
 
         } else {
 
@@ -130,8 +132,7 @@ public class MainActivity extends FragmentActivity implements DownloadCallback {
     public NetworkInfo getActiveNetworkInfo() {
         ConnectivityManager connectivityManager =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        return networkInfo;
+        return connectivityManager.getActiveNetworkInfo();
     }
 
     @Override

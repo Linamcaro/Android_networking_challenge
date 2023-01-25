@@ -6,20 +6,17 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.android.networkconnect.MainActivity
 import com.example.android.networkconnect.databinding.CharacterItemListBinding
 import com.example.android.networkconnect.model.CharacterProfile
 import com.example.android.networkconnect.model.CharacterResponse
 
-class CharacterAdapter(
-    mainActivity: MainActivity,
-    characterProfiles: CharacterResponse
-) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+class CharacterAdapter(var characterResponse: CharacterResponse) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
-    override fun getItemCount() = data.size
+
+    override fun getItemCount() = characterResponse.results.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentCharacter = data[position]
+        val currentCharacter = characterResponse.results[position]
         holder.bind(currentCharacter)
     }
 
@@ -64,15 +61,6 @@ class CharacterAdapter(
             return newItem == oldItem
         }
     }
-
-    //calculate the difference between two lists in a background thread
-    private val differ = AsyncListDiffer(this, characterDiffCallback)
-    var data: List<CharacterProfile>
-        get() = differ.currentList
-        set(value) {
-            differ.submitList(value)
-        }
-
 
 }
 

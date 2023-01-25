@@ -1,3 +1,5 @@
 package com.example.android.networkconnect.model
 
-class CharacterResponse: ArrayList<CharacterProfile>()
+class CharacterResponse(
+    val results: ArrayList<CharacterProfile>
+)

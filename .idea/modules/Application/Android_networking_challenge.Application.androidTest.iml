@@ -21,7 +21,6 @@
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/21e65fa91045ae811fa1d8932e5f65a6/transformed/fragment-ktx-1.5.3-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/c9977400e7a78462f597b3e442f77b0c/transformed/activity-ktx-1.5.1-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/4157224e84370dd6bc0d5fc9053a45a6/transformed/lifecycle-viewmodel-ktx-2.5.1-api.jar</arg>
-                <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.4/2c997cd1c0ef33f3e751d3831929aeff1390cb30/kotlinx-coroutines-core-jvm-1.6.4.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/846d22b0fcdd2c231e20ab1eb2c939a2/transformed/material-1.7.0-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/4b9b2b2f694de0327d0efb4f939dfcba/transformed/appcompat-1.6.0-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/e8e0606e35f6312b30fad2101dfcb226/transformed/glide-4.14.2-api.jar</arg>
@@ -30,7 +29,8 @@
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/4bc5164dd6b839ab522cc6e817f423e6/transformed/activity-1.6.0-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/c6c129370e35327e36abe6a9c4a7b229/transformed/lifecycle-viewmodel-savedstate-2.5.1-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/4a3b6fd5708edb9dbde848c6aa54907e/transformed/lifecycle-runtime-ktx-2.5.1-api.jar</arg>
-                <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.6.4/f955fc8b2ad196e2f4429598440e15f7492eeb2b/kotlinx-coroutines-android-1.6.4.jar</arg>
+                <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.1/97fd74ccf54a863d221956ffcd21835e168e2aaa/kotlinx-coroutines-core-jvm-1.6.1.jar</arg>
+                <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.6.1/4e61fcdcc508cbaa37c4a284a50205d7c7767e37/kotlinx-coroutines-android-1.6.1.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.7.10/d70d7d2c56371f7aa18f32e984e3e2e998fe9081/kotlin-stdlib-jdk8-1.7.10.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/6bc88e951b44cccf5f371aeb08cbf199/transformed/core-ktx-1.9.0-api.jar</arg>
                 <arg>$MODULE_DIR$/../../../../../Cursos/Udacity/Advance Android Apps With Kotlin/proyectos_de_clase/gradle/caches/transforms-3/85a8f41ba8d688d682fcf59bdca1c8f5/transformed/constraintlayout-2.1.4-api.jar</arg>
@@ -164,8 +164,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.annotation:annotation:1.3.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-common:2.5.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.7.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10" level="project" />

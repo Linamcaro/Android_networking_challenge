@@ -64,4 +64,4 @@ Support
 
 Solution Preview
 ----------------
-<img src="/Gif/app_preview.gif" width="250" height="450"/>
+<img src="/screenshots/app_preview.gif" width="250" height="450"/>
